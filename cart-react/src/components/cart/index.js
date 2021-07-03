@@ -4,7 +4,7 @@ function CART({ products }) {
   let count = 0;
   return (
     <div>
-      <table>
+      <table className="table">
         <tr data-testid="cart-item-0">
           <th> * </th>
           <th>Item</th>
@@ -16,11 +16,13 @@ function CART({ products }) {
           return (
             <div>
               {i.cartQuantity > 0 && (
-                <tr>
-                  <td> {count} </td>
-                  <td data-testid="cart-item-name">{i.item}</td>
-                  <td data-testid="cart-item-quantity">{i.cartQuantity}</td>
-                </tr>
+                <table className="table">
+                  <tr>
+                    <td> {count} </td>
+                    <td data-testid="cart-item-name"> {i.item} </td>
+                    <td data-testid="cart-item-quantity"> {i.cartQuantity} </td>
+                  </tr>
+                </table>
               )}
             </div>
           );

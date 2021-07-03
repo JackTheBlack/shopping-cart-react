@@ -1,0 +1,7 @@
+.products {
+  float: left;
+}
+.products section {
+  width: 50%;
+  float: left;
+}
